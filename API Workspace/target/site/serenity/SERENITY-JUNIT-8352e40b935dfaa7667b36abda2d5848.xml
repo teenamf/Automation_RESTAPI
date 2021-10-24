@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="Learning Selenium" skipped="0" tests="1" time="2.49" timestamp="2021-10-290 01:53:35"><testcase name="This is my first Scenario"><failure message="expected:&lt;&lt;responseCode&gt;&gt; but was:&lt;200&gt;" type="java.lang.AssertionError">expected:&lt;&lt;responseCode&gt;&gt; but was:&lt;200&gt;</failure><system-err>expected:&lt;&lt;responseCode&gt;&gt; but was:&lt;200&gt;&#13;
+apis.TestAutomationLogic.validateResponse(TestAutomationLogic.java:26)&#13;
+steps.TestAutomationSteps.validate_the_response_code(TestAutomationSteps.java:24)&#13;
+✽.Then validate the response code "&lt;responseCode&gt;"(DummyAPI.feature:5)&#13;
+</system-err></testcase></testsuite>

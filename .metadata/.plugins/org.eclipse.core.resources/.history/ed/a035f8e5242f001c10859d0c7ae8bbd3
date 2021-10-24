@@ -1,0 +1,10 @@
+Feature: Learning Selenium
+@TC1
+Scenario Outline: This is my first Scenario
+Given the user hits the url for "employees" API with "GET" method
+Then validate the response code "<responseCode>"
+
+Examples:
+|responseCode|
+|200|
+

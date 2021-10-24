@@ -1,0 +1,9 @@
+package POJO;
+
+public class CreateEmployee {
+    private String name;
+    private int salary;
+    private int age;
+    
+    
+}

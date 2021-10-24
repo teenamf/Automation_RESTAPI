@@ -1,0 +1,20 @@
+Feature: Learning Selenium
+
+Scenario Outline: GET
+Given the user hits the url for "employees" API with "GET" method
+Then validate the response code <responseCode>
+
+
+Examples:
+|responseCode|
+|200|
+
+@TC1
+Scenario Outline: This is my first Scenario for POST
+Given the user hits the url for "create" API with "POST" method
+Then validate the response code <responseCode>
+
+Examples:
+|responseCode|
+|200|
+

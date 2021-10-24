@@ -1,0 +1,22 @@
+package POJO;
+
+public class CreateEmployeeSerialize {
+	CreateEmployee creEmp=new CreateEmployee();
+	
+	public CreateEmployee serializeCreateEmp() {
+	
+	creEmp.setName("Teena");
+	creEmp.setSalary(5000);
+	creEmp.setAge(21);
+	
+	return creEmp;
+	
+	}
+	
+	
+	
+	
+	
+	
+
+}

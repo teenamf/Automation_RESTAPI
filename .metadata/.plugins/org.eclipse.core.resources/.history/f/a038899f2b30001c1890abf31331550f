@@ -1,0 +1,27 @@
+package POJO;
+
+import java.io.File;
+
+import org.codehaus.jackson.map.ObjectMapper;
+
+public class CreateEmployeeSerialize {
+	CreateEmployee creEmp=new CreateEmployee();
+	
+	public void serializeCreateEmp() {
+	
+	creEmp.setName("Teena");
+	creEmp.setSalary(5000);
+	creEmp.setAge(21);
+	
+
+	ObjectMapper objMapper = new ObjectMapper();
+	objMapper.writeValue(new File("src/main/resources/Request/CreateEmployee.json"),creEmp));
+	}
+	
+	
+	
+	
+	
+	
+
+}

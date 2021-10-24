@@ -1,0 +1,32 @@
+package POJO;
+
+import java.io.File;
+import java.io.IOException;
+
+import org.codehaus.jackson.JsonGenerationException;
+import org.codehaus.jackson.map.JsonMappingException;
+import org.codehaus.jackson.map.ObjectMapper;
+
+public class CreateEmployeeSerialize {
+	CreateEmployee creEmp=new CreateEmployee();
+	
+	public String serializeCreateEmp() throws JsonGenerationException, JsonMappingException, IOException {
+	
+	creEmp.setName("Teena");
+	creEmp.setSalary(5000);
+	creEmp.setAge(21);
+	
+
+	ObjectMapper objMapper = new ObjectMapper();
+	String stringJson=objMapper.writeValueAsString(creEmp);
+	System.out.println(stringJson);
+	return stringJson;
+	}
+	
+	
+	
+	
+	
+	
+
+}

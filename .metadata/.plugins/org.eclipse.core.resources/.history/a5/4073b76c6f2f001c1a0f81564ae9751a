@@ -1,0 +1,42 @@
+package apis;
+
+import java.io.File;
+
+import org.junit.Assert;
+
+import com.jayway.restassured.mapper.ObjectMapper;
+
+import POJO.CreateEmployeeSerialize;
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+import util.Config;
+
+public class TestAutomationLogic {
+	String baseUrl;
+	Config conf=new Config();
+	CreateEmployeeSerialize creEmpSerialise=new CreateEmployeeSerialize();
+	ObjectMapper objMapper = new ObjectMapper();
+	public String url() {
+		baseUrl = conf.retrievebaseUrl();
+		return baseUrl;
+
+	}
+
+	public Response sendRequest(String api, String method) {
+		if(method.equalsIgnoreCase("GET"))
+			return RestAssured.when().get(baseUrl.concat(api));
+		else
+			objMapper.writeValue(new File("src/main/resources/Request/CreateEmployee.json"),creEmpSerialise);
+			return RestAssured.given().log().all().body(creEmpSerialise.serializeCreateEmp()).when().post(baseUrl.concat(api));
+		
+	}
+
+	public void validateResponse(int statusCode, Response response) {
+		System.out.println(response.getStatusCode());
+		Assert.assertEquals(statusCode,response.getStatusCode());
+		
+	}
+	
+
+
+}
