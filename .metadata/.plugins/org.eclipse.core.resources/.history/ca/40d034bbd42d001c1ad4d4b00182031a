@@ -1,7 +1,0 @@
-package testRunner;
-
-import cucumber.api.CucumberOptions;
-@CucumberOptions(features="src/test/resources/features")
-public class TestRunner {
-
-}
